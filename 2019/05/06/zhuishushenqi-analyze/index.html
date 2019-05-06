@@ -5,15 +5,20 @@
   
 
   
-  <title>Trybst&#39;s Blogs</title>
+  <title>分析iOS应用“追书神器” | Trybst&#39;s Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Trybst&#39;s Blogs">
-<meta property="og:url" content="http://www.trybst.com/index.html">
+  <meta name="description" content="追书神器&amp;gt; 逆向分析应用 UIView的层级结构 （Reveal） 控制器的层级结构（Cycript） API网络接口（Charles） 代码&amp;amp;框架猜想（class-dump、MachOView等）  12345PS:准备条件1. 已越狱的手机设备2. 对逆向需要的那些工具已经准备好（百度&amp;amp;Google很好实现）3. 通过PP助手等，下载“追书神器”旧版本4. 通过iFunB">
+<meta name="keywords" content="底层+逆向">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分析iOS应用“追书神器”">
+<meta property="og:url" content="http://www.trybst.com/2019/05/06/zhuishushenqi-analyze/index.html">
 <meta property="og:site_name" content="Trybst&#39;s Blogs">
+<meta property="og:description" content="追书神器&amp;gt; 逆向分析应用 UIView的层级结构 （Reveal） 控制器的层级结构（Cycript） API网络接口（Charles） 代码&amp;amp;框架猜想（class-dump、MachOView等）  12345PS:准备条件1. 已越狱的手机设备2. 对逆向需要的那些工具已经准备好（百度&amp;amp;Google很好实现）3. 通过PP助手等，下载“追书神器”旧版本4. 通过iFunB">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-06T11:59:33.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Trybst&#39;s Blogs">
+<meta name="twitter:title" content="分析iOS应用“追书神器”">
+<meta name="twitter:description" content="追书神器&amp;gt; 逆向分析应用 UIView的层级结构 （Reveal） 控制器的层级结构（Cycript） API网络接口（Charles） 代码&amp;amp;框架猜想（class-dump、MachOView等）  12345PS:准备条件1. 已越狱的手机设备2. 对逆向需要的那些工具已经准备好（百度&amp;amp;Google很好实现）3. 通过PP助手等，下载“追书神器”旧版本4. 通过iFunB">
   
     <link rel="alternate" href="/atom.xml" title="Trybst&#39;s Blogs" type="application/atom+xml">
   
@@ -60,9 +65,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-zhuishushenqi-analyze" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-zhuishushenqi-analyze" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/06/zhuishushenqi-analyze/" class="article-date">
   <time datetime="2019-05-06T04:30:28.272Z" itemprop="datePublished">2019-05-06</time>
@@ -75,8 +78,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/06/zhuishushenqi-analyze/">分析iOS应用“追书神器”</a>
+    <h1 class="article-title" itemprop="name">
+      分析iOS应用“追书神器”
     </h1>
   
 
@@ -111,74 +114,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-iOSRE" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/05/iOSRE/" class="article-date">
-  <time datetime="2019-05-05T15:35:03.871Z" itemprop="datePublished">2019-05-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/05/iOSRE/">逆向iOS应用的思路</a>
-    </h1>
+    <a href="/2019/05/05/iOSRE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">逆向iOS应用的思路</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="逆向APP的思路"><a href="#逆向APP的思路" class="headerlink" title="逆向APP的思路"></a>逆向APP的思路</h1><h3 id="1-界面分析-Cycript、Reveal"><a href="#1-界面分析-Cycript、Reveal" class="headerlink" title="1.界面分析 [Cycript、Reveal]"></a>1.界面分析 [<strong><em>Cycript、Reveal</em></strong>]</h3><h3 id="2-代码分析-MachOView、class-dump、Hopper-Disassembler、ida等"><a href="#2-代码分析-MachOView、class-dump、Hopper-Disassembler、ida等" class="headerlink" title="2.代码分析 [MachOView、class-dump、Hopper Disassembler、ida等]"></a>2.代码分析 [<strong><em>MachOView、class-dump、Hopper Disassembler、ida等</em></strong>]</h3><h3 id="3-动态调试-对运行中的APP进行代码调试-debugserver、LLDB"><a href="#3-动态调试-对运行中的APP进行代码调试-debugserver、LLDB" class="headerlink" title="3.动态调试 [对运行中的APP进行代码调试(debugserver、LLDB)]"></a>3.动态调试 [<strong><em>对运行中的APP进行代码调试(debugserver、LLDB)</em></strong>]</h3><h3 id="4-代码编写-注入代码到APP中-必要时还可能需要重新签名、打包ipa"><a href="#4-代码编写-注入代码到APP中-必要时还可能需要重新签名、打包ipa" class="headerlink" title="4.代码编写 [注入代码到APP中 必要时还可能需要重新签名、打包ipa]"></a>4.代码编写 [<strong><em>注入代码到APP中 必要时还可能需要重新签名、打包ipa</em></strong>]<br><br></h3><hr>
-<h4 id="PS-Reveal-gt-识别-UIView-的层级结构"><a href="#PS-Reveal-gt-识别-UIView-的层级结构" class="headerlink" title="PS: Reveal-&gt;识别 UIView 的层级结构"></a>PS: Reveal-&gt;识别 <em>UIView</em> 的层级结构</h4><ul>
-<li><p><strong><em>1.</em></strong> 去下载Reveal4.0以上版本（支持USB调试），并破解（网上有教程）<br><br></p>
-</li>
-<li><p><strong><em>2.</em></strong> 调试环境配置</p>
-</li>
-<li>2.1 软件源：<a href="http://apt.so/codermjlee" target="_blank" rel="noopener">http://apt.so/codermjlee</a></li>
-<li>2.2 安装完Reveal Loader后，打开手机【设置】，找到Reveal-&gt;Enabled Applications-&gt;选择需要调试的APP</li>
-<li>2.3 找到Mac的Reveal中的<strong>RevealServer</strong>文件，并覆盖iPhone中的<strong>/Library/RHRevealLoader/RevealServer</strong>文件</li>
-<li>2.3.1 Reveal导航栏中<strong>Help -&gt; Show Reveal Library in Finder -&gt; iOS Library</strong> </li>
-<li><p>2.3.2 重启手机：reboot<br><br></p>
-</li>
-<li><p><strong><em>3.0</em></strong> 这下打开手机&amp;Reveal就可以实时看到APP的结构<br><br></p>
-</li>
-</ul>
-<h4 id="PS：Cycript-gt-识别-控制器-的层级结构"><a href="#PS：Cycript-gt-识别-控制器-的层级结构" class="headerlink" title="PS：Cycript-&gt;识别 控制器 的层级结构"></a>PS：Cycript-&gt;识别 <em>控制器</em> 的层级结构</h4><p>推荐Mj的一个开源库<a href="https://github.com/CoderMJLee/mjcript" target="_blank" rel="noopener">mjcript</a></p>
-<ul>
-<li>ting是应用的进程名</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~ root# cycript -p ting</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>进入cy环境（cmd+r清屏==clear，）</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cy# @import mjcript</span><br><span class="line">&#123;&#125;</span><br><span class="line">cy# MJChildVcs(MJRootVc())</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.trybst.com/2019/05/05/iOSRE/" data-id="cjvcaz6t10000t0j6ek9hz4o9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/底层-逆向/">底层+逆向</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[《忽而今夏》]]></title>
+    <url>%2F2019%2F05%2F09%2Finformal_essay_%E5%BF%BD%E8%80%8C%E4%BB%8A%E5%A4%8F%2F</url>
+    <content type="text"><![CDATA[《忽而今夏》 作者：明前雨后 简介：主要讲述“章远”和“何洛”从学校到社会，超过十年的爱情故事。 内容： 这里有许多我们熟悉的画面，纯净得让人嫉妒的青春。在我们最意气风发的青春年华，遇见那个最合适的你！ 在简短少年时代，与她有个不一样的夏天。在追寻的路上，朋友的陪伴，让自己都不相信能坚持到最后的自己。 “你说你搭上半条命都考不上，你真的做到了吗？”（真的坚持了吗？） 在自己青春的路上，拼了命一样努力为目标而奋斗！（努力做到了，别人认为她完全不可能做到的事情）。忽然感觉自己的青春都活到了dog身上，一直糊糊涂涂。前半生就这么迷迷糊糊的过去了…… “The best preparation for tomorrow, is doing your best today.”（做今天最好的自己！） 人。不能总这么简简单单的过，总得为了自己的目标而坚持不懈，证明自己也曾年轻过、疯狂过。平凡的我们至少有努力的资格！ 错的只是那些自以为是的一辈子… 总有一天，我们会成为那个连我们都喜欢的自己！ “想清楚自己想干什么？还有能干什么？”（找到自己的方向!） 这个年纪的我们，总得为了某个心疼的她或他而改变，总得让身边的对自己放心。这样多年后的自己，才不会留下任何遗憾！ “Knowledge is power.” 小傻瓜！青春的尾巴遇见你，真巧！余生有你，真好！ 1234567891011121314151617愿望：小时候，梦想成为一个画家；再大一些的时候，梦想成为一个数学家；后来，梦想成为一个梦想；梦想始终是梦想生活才更有动力！终有一天，和她一起去追梦！ 123456789101112梦：在世界的另一边。有个自己的小农场，一间小农舍。每天，日出而作，日落而息！]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>小说</tag>
+        <tag>读后感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MarkDown语法]]></title>
+    <url>%2F2019%2F05%2F08%2FMarkDown%2F</url>
+    <content type="text"><![CDATA[语法教程：http://www.markdown.cn 链接：![图片描述](图片地址/本地地址)&quot;(空格) 鼠标悬停显示文字(可选)&quot; PS: MD语法可与HTML标签共用； 即：&lt;img src=&quot;http://...&quot; width = &quot;100&quot; height = &quot;100&quot; div align=right /&gt; 邮箱：&lt;邮箱地址&gt;e-mail: &#116;&#114;&#x79;&#x62;&#115;&#x74;&#x40;&#x79;&#101;&#97;&#104;&#x2e;&#x6e;&#x65;&#x74; 基本常用用法加粗：**Strong** _斜体_：* Emphasize* —下划线—： ---下划线---or&lt;u&gt;下划线&lt;/u&gt; 加粗斜体：***Strong &amp; Emphasize*** 删除线：~~删除线~~ 分割线：***或---或___ 选中标记：&lt;mark&gt;标记&lt;/mark&gt; 转义字符\：So A\*maz\*ing So A*maz*ing 2的n+1次方：2&lt;sup&gt;n&lt;/sup&gt; 2\^(n+1) = 2(n+1) 目录 &amp; 代码块 1 * 1 2 * 2 1. [x] * [x] * [x] 2. [ ] 1$ coding 表格主要使用：|列，-行，:对齐；（PS：最左边和最右边|只是为了美观，: 作为左右对齐的标志；） 单表格1234First Header | Second Header------------- | -------------Content Cell | Content CellContent Cell | Content Cell First Header Second Header Content Cell Content Cell Content Cell Content Cell 对齐+多表格12345| Left Aligned | Center Aligned | Right Aligned ||:------------- |:---------------:| -------------:|| col 3 is | some wordy text | $1600 || col 2 is | centered | $12 || zebra stripes | are neat | $1 | Left Aligned Center Aligned Right Aligned col 3 is some wordy text $1600 col 2 is centered $12 zebra stripes are neat $1 复杂表格： 12345678910Option name | Markup | Result if enabled |--------------------|------------------|-----------------------|Intra-word emphasis | So A\*maz\*ing | So A&lt;em&gt;maz&lt;/em&gt;ing |Strikethrough | \~~Much wow\~~ | &lt;del&gt;Much wow&lt;/del&gt; |Underline [^under] | \_So doge\_ | &lt;u&gt;So doge&lt;/u&gt; |Quote [^quote] | \&quot;Such editor\&quot; | &lt;q&gt;Such editor&lt;/q&gt; |Highlight | \==So good\== | &lt;mark&gt;So good&lt;/mark&gt; |Superscript | hoge\^(fuga) | hoge&lt;sup&gt;fuga&lt;/sup&gt; |Autolink | http://t.co | &lt;http://t.co&gt; |Footnotes | [\^4] and [\^4]: | [^4] and footnote 4 | Option name Markup Result if enabled Intra-word emphasis So A*maz*ing So Amazing Strikethrough ~~Much wow~~ Much wow Underline [^under] _So doge_ So doge Quote [^quote] \”Such editor\” Such editor Highlight \==So good\== So good Superscript hoge\^(fuga) hogefuga Autolink http://t.co http://t.co Footnotes [\^4] and [\^4]: [^4] and footnote 4 其他用法12345---title: &quot;title&quot;tag: &quot;md&quot;date: 2019-5-8--- “x”代表已经选中， “ ”代表未选中。12341. [x] I can render checkbox list syntax * [ ] I support nesting * [x] I support ordered *and* unordered lists2. [ ] I don&apos;t support clicking checkboxes directly in the html window I can render checkbox list syntax I support nesting I support ordered and unordered lists I don’t support clicking checkboxes directly in the html window 博客地址：https://www.cnblogs.com/SpongeBob-GitHub/]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[分析iOS应用“追书神器”]]></title>
+    <url>%2F2019%2F05%2F06%2Fzhuishushenqi-analyze%2F</url>
+    <content type="text"><![CDATA[&gt; 逆向分析应用 UIView的层级结构 （Reveal） 控制器的层级结构（Cycript） API网络接口（Charles） 代码&amp;框架猜想（class-dump、MachOView等） 12345PS:准备条件1. 已越狱的手机设备2. 对逆向需要的那些工具已经准备好（百度&amp;Google很好实现）3. 通过PP助手等，下载“追书神器”旧版本4. 通过iFunBox将ipa文件下载到电脑，找到Mach-O文件 一：class-dump的初步分析头文件 常用格式： class-dump -H Mach-O文件路径 -o 头文件存放目录 1$ class-dump -H ~/Desktop/iOSRE/mach-o/YouShaQi -o ~/Desktop/iOSRE/header/zhuishushenqi 将zhuishushenqi文件夹通过sublime打开，就可以通过.h文件简单分析里面所用到的框架&amp;方法]]></content>
+      <tags>
+        <tag>底层+逆向</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[逆向iOS应用的思路]]></title>
+    <url>%2F2019%2F05%2F05%2FiOSRE%2F</url>
+    <content type="text"><![CDATA[1.界面分析 [Cycript、Reveal]2.代码分析 [MachOView、class-dump、Hopper Disassembler、ida等]3.动态调试 [对运行中的APP进行代码调试(debugserver、LLDB)]4.代码编写 [注入代码到APP中 必要时还可能需要重新签名、打包ipa] PS: Reveal-&gt;识别 UIView 的层级结构 1. 去下载Reveal4.0以上版本（支持USB调试），并破解（网上有教程） 2. 调试环境配置 2.1 软件源：http://apt.so/codermjlee 2.2 安装完Reveal Loader后，打开手机【设置】，找到Reveal-&gt;Enabled Applications-&gt;选择需要调试的APP 2.3 找到Mac的Reveal中的RevealServer文件，并覆盖iPhone中的/Library/RHRevealLoader/RevealServer文件 2.3.1 Reveal导航栏中Help -&gt; Show Reveal Library in Finder -&gt; iOS Library 2.3.2 重启手机：reboot 3.0 这下打开手机&amp;Reveal就可以实时看到APP的结构 PS：Cycript-&gt;识别 控制器 的层级结构推荐Mj的一个开源库mjcript ting是应用的进程名 1~ root# cycript -p ting 进入cy环境（cmd+r清屏==clear，） 1234cy# @import mjcript&#123;&#125;cy# MJChildVcs(MJRootVc())&#123;&#125;]]></content>
+      <tags>
+        <tag>底层+逆向</tag>
+      </tags>
+  </entry>
+</search>

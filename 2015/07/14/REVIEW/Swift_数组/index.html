@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/icon.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1import UIKit  数组: 存储一组有序的数据  OC:   有值数组: 123NSArray *arr0 = @[@1, @2, @3];NSArray *arr1 = [NSArray arrayWithObjects:@1, @2, @3, nil];NSLog(@&amp;quot;%@&amp;quot;, arr1); 空数组 123NSArray *arr2 = @[];NSArray *">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift * 数组">
+<meta property="og:url" content="http://www.trybst.com/2015/07/14/REVIEW/Swift_数组/index.html">
+<meta property="og:site_name" content="Trybst&#39;s Blogs">
+<meta property="og:description" content="1import UIKit  数组: 存储一组有序的数据  OC:   有值数组: 123NSArray *arr0 = @[@1, @2, @3];NSArray *arr1 = [NSArray arrayWithObjects:@1, @2, @3, nil];NSLog(@&amp;quot;%@&amp;quot;, arr1); 空数组 123NSArray *arr2 = @[];NSArray *">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-13T14:09:05.190Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift * 数组">
+<meta name="twitter:description" content="1import UIKit  数组: 存储一组有序的数据  OC:   有值数组: 123NSArray *arr0 = @[@1, @2, @3];NSArray *arr1 = [NSArray arrayWithObjects:@1, @2, @3, nil];NSLog(@&amp;quot;%@&amp;quot;, arr1); 空数组 123NSArray *arr2 = @[];NSArray *">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://www.trybst.com/2015/07/14/REVIEW/Swift_数组/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Swift * 数组 | Trybst's Blogs</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Trybst's Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">遇见你，真巧！余生有你，真好！</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.trybst.com/2015/07/14/REVIEW/Swift_数组/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Trybst.Ma">
+      <meta itemprop="description" content="Whatever you do, try your best.">
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Trybst's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Swift * 数组
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2015-07-14 00:00:00" itemprop="dateCreated datePublished" datetime="2015-07-14T00:00:00+08:00">2015-07-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-13 22:09:05" itemprop="dateModified" datetime="2019-05-13T22:09:05+08:00">2019-05-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Swift学习/" itemprop="url" rel="index"><span itemprop="name">Swift学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2015/07/14/REVIEW/Swift_数组/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2015/07/14/REVIEW/Swift_数组/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>数组: 存储一组有序的数据</p>
+</li>
+<li><p>OC:</p>
+</li>
+</ul>
+<p>有值数组:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSArray *arr0 = @[@1, @2, @3];</span><br><span class="line">NSArray *arr1 = [NSArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr1);</span><br></pre></td></tr></table></figure>
+<p>空数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSArray *arr2 = @[];</span><br><span class="line">NSArray *arr3 = [NSArray array];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr3);</span><br></pre></td></tr></table></figure>
+<p>不可变数组:NSArray<br>可变数组:NSMutableArray</p>
+<ul>
+<li>Swift: </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 有值数组</span><br><span class="line">var arr0 = [1, 2, 3]</span><br><span class="line">var arr1: Array = [1, 2, 3]</span><br><span class="line">var arr2: Array&lt;Int*  = [1, 2, 3]</span><br><span class="line">var arr3: [Int] = [1, 2, 3]</span><br><span class="line">//var arr4: Int[] = [1, 2, 3] 早期写法</span><br><span class="line"></span><br><span class="line">// 空数组</span><br><span class="line">var arr5 = []</span><br><span class="line">var arr6 = [Int]()</span><br><span class="line">var arr7 = Array&lt;Int* ()</span><br><span class="line">// 带初始值的数组</span><br><span class="line">var arr8 = Array(count: 5, repeatedValue: 1)</span><br><span class="line">println(arr8)</span><br><span class="line"></span><br><span class="line">// 不可变数组:var arr0 = []</span><br><span class="line">// 可变数组:let arr0  = []</span><br></pre></td></tr></table></figure>
+<p>元素类型<br>OC:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSArray *arr = @[@1, @&quot;lnj&quot;, @1.75];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr_02 = [1, &quot;lnj&quot;, 1.75]</span><br><span class="line">println(arr_02)</span><br></pre></td></tr></table></figure>
+<p>如果想明确表示数组中存放的是不同类型的数据, 可以使用Any关键字, 表示数组中可以存放不同类型的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr:Array&lt;Any*  = [1, &quot;lnj&quot;, 1.75]</span><br><span class="line">println(arr)</span><br></pre></td></tr></table></figure>
+<h4 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h4><ul>
+<li>1.获取长度<br>OC:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSArray *arr = @[@1, @2, @3];</span><br><span class="line">NSLog(@&quot;%tu&quot;, arr.count);</span><br></pre></td></tr></table></figure>
+<p>Swift:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3]</span><br><span class="line">println(arr.count)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>2.判断是否为空<br>OC:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSArray *arr = @[];</span><br><span class="line">NSLog(@&quot;%d&quot;, arr.count != 0);</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr_01 = [1, 2, 3]</span><br><span class="line">println(arr_01.isEmpty)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>3.检索<br>OC:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSArray *arr = @[@1, @2, @3];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr[0]);</span><br></pre></td></tr></table></figure>
+<p>Swift:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3]</span><br><span class="line">println(arr[0])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>4.追加<br>OC:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *arr = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">[arr addObject:@4];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr02 = [1, 2, 3]</span><br><span class="line">arr02.append(4);</span><br><span class="line">println(arr02)</span><br><span class="line"></span><br><span class="line">var arr03 = [1, 2, 3]</span><br><span class="line">arr03 += [4]</span><br><span class="line">// arr03 += 4 以前的版本可以这样写</span><br><span class="line">//arr03 += [5, 6, 7]</span><br><span class="line">arr03 += arr03[0...1] // 还可以自己搞自己</span><br><span class="line">println(arr03)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>5.插入<br>OC:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *arr = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">[arr insertObject:@4 atIndex:0];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3]</span><br><span class="line">arr.insert(4, atIndex: 0);</span><br><span class="line">println(arr)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>6.更新<br>OC:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *arr = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">arr[0] = @8;</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr01 = [1, 2, 3]</span><br><span class="line">arr01[0] = 8</span><br><span class="line">println(arr01)</span><br><span class="line"></span><br><span class="line">var arr0002 = [1, 2, 3]</span><br><span class="line">arr0002[0..&lt;2] = [8, 9]</span><br><span class="line">println(arr0002)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>7.删除<br>OC:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *arr = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">[arr removeObject:@1];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br><span class="line"></span><br><span class="line">NSMutableArray *arr = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">[arr removeLastObject];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br><span class="line"></span><br><span class="line">NSMutableArray *arr = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">[arr removeAllObjects];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var arr001 = [1, 2, 3]</span><br><span class="line">arr001.removeAtIndex(0)</span><br><span class="line">println(arr001)</span><br><span class="line"></span><br><span class="line">var arr002 = [1, 2, 3]</span><br><span class="line">arr002.removeLast()</span><br><span class="line">println(arr002)</span><br><span class="line"></span><br><span class="line">var arr003 = [1, 2, 3]</span><br><span class="line">arr003.removeAll(keepCapacity: false) //是否保持容量, 如果为true, 即便删除了容量依然存在, 容量是2的倍数</span><br><span class="line">println(arr003)</span><br><span class="line">println(arr003.capacity)</span><br></pre></td></tr></table></figure>
+<p>注意: 如果数组是一个不可变数组不能更新/插入和删除<br>第一个版本的不可变数组是可以修改的</p>
+<ul>
+<li>Range<br>OC:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *arr = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">[arr removeObjectsInRange:NSMakeRange(0, 2)];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var arr_1 = [1, 2, 3]</span><br><span class="line">arr_1.removeRange(Range(start: 1, end: 2))</span><br><span class="line">println(arr_1)</span><br><span class="line"></span><br><span class="line">var arr_2 = [1, 2, 3]</span><br><span class="line">arr_2.removeRange(0...0)</span><br><span class="line">println(arr_2)</span><br><span class="line"></span><br><span class="line">// 其实Range就是半闭区间</span><br><span class="line">var range = 0...5</span><br><span class="line">//range = 99 // 通过报错可以推断出类型</span><br><span class="line">println(range) // 通过打印也可以推断出类型</span><br><span class="line"></span><br><span class="line">var range1:Range&lt;Int*  = 0...5</span><br><span class="line">//var range2:Range&lt;String* ; // 必须遵守ForwardIndexType协议</span><br><span class="line">// start 起点 end 终点</span><br><span class="line">var range3:Range&lt;Int*  = Range(start: 0, end: 5)</span><br><span class="line">var range4:Range&lt;Int*  = 0..&lt;5</span><br><span class="line">println(range1)</span><br><span class="line">println(range3)</span><br><span class="line">println(range4)</span><br></pre></td></tr></table></figure>
+<p>OC:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *arr = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];</span><br><span class="line">NSRange range = NSMakeRange(0, 2);</span><br><span class="line">// [arr replaceObjectsInRange:range withObjectsFromArray:@[@99, @88]];</span><br><span class="line">[arr replaceObjectsInRange:range withObjectsFromArray:@[@99, @88, @77, @66]];</span><br><span class="line">NSLog(@&quot;%@&quot;, arr);</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//arr.replaceRange(Range(start: 0, end: 2), with: [99, 88, 77, 66])</span><br><span class="line">arr.replaceRange(1..&lt;2, with: [99, 88, 77, 66])</span><br><span class="line">println(arr)</span><br><span class="line"></span><br><span class="line">// 等价于上一行代码</span><br><span class="line">var arr_3 = [1, 2, 3]</span><br><span class="line">arr_3[Range(start: 0, end: 2)] = [8, 9]</span><br><span class="line">println(arr_3)</span><br><span class="line"></span><br><span class="line">// 等价于上一行代码</span><br><span class="line">var arr_4 = [1, 2, 3]</span><br><span class="line">//arr[0...1] = [99, 88]</span><br><span class="line">//arr[0...1] = [99, 88, 77, 66]</span><br></pre></td></tr></table></figure>
+<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p>OC:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// for循环</span><br><span class="line">NSArray *arr = @[@1, @2, @3];</span><br><span class="line">for (int i = 0; i &lt; arr.count; i++) &#123;</span><br><span class="line">NSLog(@&quot;%@&quot;, arr[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// for in循环</span><br><span class="line">for (NSNumber *number in arr) &#123;</span><br><span class="line">NSLog(@&quot;%@&quot;, number);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 迭代器</span><br><span class="line">NSArray *arr0 = @[@1, @2, @&quot;1&quot;];</span><br><span class="line">[arr0 enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) &#123;</span><br><span class="line">NSLog(@&quot;index = %tu element = %@&quot;, idx, obj);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>Swift: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">// for循环</span><br><span class="line">var arr_a = [1, 2, 3]</span><br><span class="line">for var i = 0 ; i &lt; arr_a.count ; i++</span><br><span class="line">&#123;</span><br><span class="line">println(arr_a[i])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// for in循环</span><br><span class="line">for number in arr_a</span><br><span class="line">&#123;</span><br><span class="line">println(number)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for i in 0..&lt;arr_a.count</span><br><span class="line">&#123;</span><br><span class="line">println(arr_a[i])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 取出数组中某个区间范围的值</span><br><span class="line">var arr_b = [1, 2, 3]</span><br><span class="line">for number in arr_b[0..&lt;3]</span><br><span class="line">&#123;</span><br><span class="line">println(number)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 利用enumerate迭代</span><br><span class="line">var arr_c = [1, 2, 3]</span><br><span class="line">for (index , value) in enumerate(arr_c)</span><br><span class="line">&#123;</span><br><span class="line">println(&quot;index = \(index) value = \(value)&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swift/" rel="tag"># Swift</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/09/REVIEW/Swift_异常处理/" rel="next" title="Swift * 异常处理">
+                <i class="fa fa-chevron-left"></i> Swift * 异常处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/17/REVIEW/Swift_字典/" rel="prev" title="Swift * 字典">
+                Swift * 字典 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/logo.png" alt="Trybst.Ma">
+            
+              <p class="site-author-name" itemprop="name">Trybst.Ma</p>
+              <div class="site-description motion-element" itemprop="description">Whatever you do, try your best.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/trybst" title="Github &rarr; https://github.com/trybst" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>Github</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:trybst@yeah.net" title="E-Mail &rarr; mailto:trybst@yeah.net" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.cnblogs.com/trybst" title="博客园 &rarr; https://www.cnblogs.com/trybst" rel="noopener" target="_blank"><i class="fa fa-fw fa-cnblog"></i>博客园</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组操作"><span class="nav-number">1.</span> <span class="nav-text">数组操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历"><span class="nav-number">2.</span> <span class="nav-text">遍历</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Trybst.Ma</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'JU1nhQkxBYFibyHewlKLUsDu-gzGzoHsz',
+    appKey: 'VvxCvGILc1qDKBmbuL3Ewqou',
+    placeholder: '请在此输入您的留言',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+    <!-- LOCAL: You can save these files to your site and update links -->
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitmint.browser.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
+<!-- END LOCAL -->
+
+<script>
+  function renderGitment() {
+    var gitment = new Gitmint({
+      id: window.location.pathname,
+      owner: 'Trybst',
+      repo: 'BlogComments',
+      
+        lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+      
+      oauth: {
+      
+      
+        client_secret: '6364c89b2dda1039e7209b8c416255072d38b171',
+      
+        client_id: 'b649a76784cb4a245f7e'
+      }
+    });
+    gitment.render('gitment-container');
+  }
+
+  
+    renderGitment();
+  
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

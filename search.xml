@@ -1,77 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Flutter * 入门]]></title>
-    <url>%2F2019%2F05%2F20%2FFlutter_%E5%85%A5%E9%97%A8%2F</url>
-    <content type="text"><![CDATA[简介…]]></content>
-      <categories>
-        <category>其他语言学习</category>
-      </categories>
-      <tags>
-        <tag>Flutter</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[iOS之LeanCloud]]></title>
-    <url>%2F2019%2F05%2F20%2FLeanCloud%2F</url>
-    <content type="text"><![CDATA[LeanCloud简介编辑界面慕课网：https://www.imooc.com/learn/999]]></content>
-      <categories>
-        <category>Object-C</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Vim - the ubiquitous text edito]]></title>
     <url>%2F2019%2F05%2F20%2Fvim%2F</url>
     <content type="text"><![CDATA[玩转Vim官网：vim.org - 无处不在的文本编辑器 初识Vim &amp; 灵活使用编写Vim配置插件安装 &amp; 使用总结：推荐学习： 菜鸟教程：Linux教程 - vi/vim 慕课网（视频）：玩转Vim 从放弃到爱不释手]]></content>
       <tags>
         <tag>其他</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Runloop详解]]></title>
-    <url>%2F2019%2F05%2F15%2FRunloop%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>Object-C</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[内存]]></title>
-    <url>%2F2019%2F05%2F15%2F%E5%86%85%E5%AD%98%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>Object-C</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[网络]]></title>
-    <url>%2F2019%2F05%2F15%2F%E7%BD%91%E7%BB%9C%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>Object-C</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[多线程]]></title>
-    <url>%2F2019%2F05%2F15%2F%E5%A4%9A%E7%BA%BF%E7%A8%8B%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>Object-C</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
       </tags>
   </entry>
   <entry>
@@ -89,7 +23,7 @@
   <entry>
     <title><![CDATA[MarkDown语法]]></title>
     <url>%2F2019%2F05%2F08%2FMarkDown%2F</url>
-    <content type="text"><![CDATA[语法教程：http://www.markdown.cn 基本常用用法 换行：行尾 加 两个空格 &amp; 回车符. 间隔：每段落写完后 空一整行 or 直接使用标签&lt;br/&gt; 空格：手动&amp;nbsp; or 全角空格(MD只能识别一个空格-在半角输入状态) 段首缩进： &emsp;&emsp;come here…写法为：&amp;emsp;&amp;emsp;come here... 1234半方大的空白 &amp;ensp; 或 &amp;#8194;全方大的空白 &amp;emsp; 或 &amp;#8195;不断行的空白格 &amp;nbsp; 或 &amp;#160;两个 &amp;emsp; 加粗：**Strong** _斜体_：* Emphasize* —下划线—： ---下划线---or&lt;u&gt;下划线&lt;/u&gt; 加粗斜体：***Strong &amp; Emphasize*** 删除线：~~删除线~~ 分割线：***或---或___ 选中标记：&lt;mark&gt;标记&lt;/mark&gt; 转义字符\：So A\*maz\*ing So A*maz*ing 2的n+1次方：2&lt;sup&gt;n&lt;/sup&gt; 2\^(n+1) = 2(n+1) 特殊符号$：一个\$直接显示，两个\$$之间转义为数学公式$$\int_0^1 x^2\,dx$$ $$\int_0^1 x^2\,dx$$ 链接 链接：![图片描述](图片地址/本地地址)&quot;(空格) 鼠标悬停显示文字(可选)&quot; PS: MD语法可与HTML标签共用； 即：&lt;img src=&quot;http://...&quot; width = &quot;100&quot; height = &quot;100&quot; div align=right /&gt; 邮箱：&lt;邮箱地址&gt;e-mail: &#x74;&#x72;&#x79;&#98;&#115;&#x74;&#x40;&#x79;&#x65;&#x61;&#104;&#x2e;&#x6e;&#101;&#116; 目录 &amp; 代码块 1 * 1 2 * 2 1. [x] * [x] * [x] 2. [ ] 代码块：`$ code 1$ code 表格主要使用：|列，-行，:对齐；（PS：最左边和最右边|只是为了美观，: 作为左右对齐的标志；） 单表格 1234First Header | Second Header------------- | -------------Content Cell | Content CellContent Cell | Content Cell First Header Second Header Content Cell Content Cell Content Cell Content Cell 对齐+多表格 12345| Left Aligned | Center Aligned | Right Aligned ||:------------- |:---------------:| -------------:|| col 3 is | some wordy text | $1600 || col 2 is | centered | $12 || zebra stripes | are neat | $1 | Left Aligned Center Aligned Right Aligned col 3 is some wordy text $1600 col 2 is centered $12 zebra stripes are neat $1 复杂表格： 12345678910Option name | Markup | Result if enabled |--------------------|------------------|-----------------------|Intra-word emphasis | So A\*maz\*ing | So A&lt;em&gt;maz&lt;/em&gt;ing |Strikethrough | \~~Much wow\~~ | &lt;del&gt;Much wow&lt;/del&gt; |Underline [^under] | \_So doge\_ | &lt;u&gt;So doge&lt;/u&gt; |Quote [^quote] | \&quot;Such editor\&quot; | &lt;q&gt;Such editor&lt;/q&gt; |Highlight | \==So good\== | &lt;mark&gt;So good&lt;/mark&gt; |Superscript | hoge\^(fuga) | hoge&lt;sup&gt;fuga&lt;/sup&gt; |Autolink | http://t.co | &lt;http://t.co&gt; |Footnotes | [\^4] and [\^4]: | [^4] and footnote 4 | Option name Markup Result if enabled Intra-word emphasis So A*maz*ing So Amazing Strikethrough ~~Much wow~~ Much wow Underline [^under] _So doge_ So doge Quote [^quote] \”Such editor\” Such editor Highlight \==So good\== So good Superscript hoge\^(fuga) hogefuga Autolink http://t.co http://t.co Footnotes [\^4] and [\^4]: [^4] and footnote 4 其他用法12345---title: &quot;title&quot;tag: &quot;md&quot;date: 2019-5-8--- “x”代表已经选中， “ ”代表未选中。 12341. [x] I can render checkbox list syntax * [ ] I support nesting * [x] I support ordered *and* unordered lists2. [ ] I don&apos;t support clicking checkboxes directly in the html window I can render checkbox list syntax I support nesting I support ordered and unordered lists I don’t support clicking checkboxes directly in the html window 博客地址：https://www.cnblogs.com/SpongeBob-GitHub/]]></content>
+    <content type="text"><![CDATA[语法教程：http://www.markdown.cn 基本常用用法 换行：行尾 加 两个空格 &amp; 回车符. 间隔：每段落写完后 空一整行 or 直接使用标签&lt;br/&gt; 空格：手动&amp;nbsp; or 全角空格(MD只能识别一个空格-在半角输入状态) 段首缩进： &emsp;&emsp;come here…写法为：&amp;emsp;&amp;emsp;come here... 1234半方大的空白 &amp;ensp; 或 &amp;#8194;全方大的空白 &amp;emsp; 或 &amp;#8195;不断行的空白格 &amp;nbsp; 或 &amp;#160;两个 &amp;emsp; 加粗：**Strong** _斜体_：* Emphasize* —下划线—： ---下划线---or&lt;u&gt;下划线&lt;/u&gt; 加粗斜体：***Strong &amp; Emphasize*** 删除线：~~删除线~~ 分割线：***或---或___ 选中标记：&lt;mark&gt;标记&lt;/mark&gt; 转义字符\：So A\*maz\*ing So A*maz*ing 2的n+1次方：2&lt;sup&gt;n&lt;/sup&gt; 2\^(n+1) = 2(n+1) 特殊符号$：一个\$直接显示，两个\$$之间转义为数学公式$$\int_0^1 x^2\,dx$$ $$\int_0^1 x^2\,dx$$ 链接 链接：![图片描述](图片地址/本地地址)&quot;(空格) 鼠标悬停显示文字(可选)&quot; PS: MD语法可与HTML标签共用； 即：&lt;img src=&quot;http://...&quot; width = &quot;100&quot; height = &quot;100&quot; div align=right /&gt; 邮箱：&lt;邮箱地址&gt;e-mail: &#116;&#x72;&#x79;&#98;&#115;&#x74;&#64;&#x79;&#x65;&#97;&#x68;&#46;&#x6e;&#101;&#x74; 目录 &amp; 代码块 1 * 1 2 * 2 1. [x] * [x] * [x] 2. [ ] 代码块：`$ code 1$ code 表格主要使用：|列，-行，:对齐；（PS：最左边和最右边|只是为了美观，: 作为左右对齐的标志；） 单表格 1234First Header | Second Header------------- | -------------Content Cell | Content CellContent Cell | Content Cell First Header Second Header Content Cell Content Cell Content Cell Content Cell 对齐+多表格 12345| Left Aligned | Center Aligned | Right Aligned ||:------------- |:---------------:| -------------:|| col 3 is | some wordy text | $1600 || col 2 is | centered | $12 || zebra stripes | are neat | $1 | Left Aligned Center Aligned Right Aligned col 3 is some wordy text $1600 col 2 is centered $12 zebra stripes are neat $1 复杂表格： 12345678910Option name | Markup | Result if enabled |--------------------|------------------|-----------------------|Intra-word emphasis | So A\*maz\*ing | So A&lt;em&gt;maz&lt;/em&gt;ing |Strikethrough | \~~Much wow\~~ | &lt;del&gt;Much wow&lt;/del&gt; |Underline [^under] | \_So doge\_ | &lt;u&gt;So doge&lt;/u&gt; |Quote [^quote] | \&quot;Such editor\&quot; | &lt;q&gt;Such editor&lt;/q&gt; |Highlight | \==So good\== | &lt;mark&gt;So good&lt;/mark&gt; |Superscript | hoge\^(fuga) | hoge&lt;sup&gt;fuga&lt;/sup&gt; |Autolink | http://t.co | &lt;http://t.co&gt; |Footnotes | [\^4] and [\^4]: | [^4] and footnote 4 | Option name Markup Result if enabled Intra-word emphasis So A*maz*ing So Amazing Strikethrough ~~Much wow~~ Much wow Underline [^under] _So doge_ So doge Quote [^quote] \”Such editor\” Such editor Highlight \==So good\== So good Superscript hoge\^(fuga) hogefuga Autolink http://t.co http://t.co Footnotes [\^4] and [\^4]: [^4] and footnote 4 其他用法12345---title: &quot;title&quot;tag: &quot;md&quot;date: 2019-5-8--- “x”代表已经选中， “ ”代表未选中。 12341. [x] I can render checkbox list syntax * [ ] I support nesting * [x] I support ordered *and* unordered lists2. [ ] I don&apos;t support clicking checkboxes directly in the html window I can render checkbox list syntax I support nesting I support ordered and unordered lists I don’t support clicking checkboxes directly in the html window 博客地址：https://www.cnblogs.com/SpongeBob-GitHub/]]></content>
       <categories>
         <category>Others</category>
       </categories>
@@ -462,7 +396,7 @@
   <entry>
     <title><![CDATA[Github + Hexo + Next]]></title>
     <url>%2F2015%2F05%2F20%2FREVIEW%2FHexo%2F</url>
-    <content type="text"><![CDATA[# Hexo + Github 搭建个人博客 ！ 前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端 建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.github.io 的仓库（必须是你的用户名，其它名称无效，不区分大小写），将来你的网站访问地址就是 https://test.github.io 了 一、Hexo简介： 官网：https://hexo.io Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 1、首先根据官网的流程安装安装前提：Nodi.js、Git 1$ npm install -g hexo-cli 2、建站123$ hexo init test$ cd test$ npm install 3、写作1$ hexo new [layout] &lt;title&gt; 布局 路径 post source/_posts page source draft source/_drafts 4、测试12$ hexo g$ hexo s 打开浏览器：http://localhost:4000 5、部署通过git部署到github： 安装 hexo-deployer-git 1$ npm install hexo-deployer-git --save 修改配置 12345deploy: type: git repo: https://github.com/Trybst/trybst.github.io.git branch: master message: test 3.提交到git 1$ hexo d 二、域名配置： 绑定域名（当Blog生成并上传完成后） 购买自己的域名（推荐阿里云） 获取自己博客的地址ping 博客地址 1$ ping test.github.io 域名解析（阿里云后台配置域名解析）[ xxx.xxx.xxx.xxx为博客的ip地址 ] 记录类型 | 主机记录 | 解析线路 | 记录值 | MX优先级 | TTL | ... ------- | ---- | --- | ------------- | --- | ---- | --- A | @ | 默认 | xxx.xxx.xxx.xxx | -- | 10分钟 | ... CNAME | www | 默认 | test.github.io | -- | 10分钟 | ... 三、hexo - Next 主题基本操作： 下载远程库到本地themes文件目录下 12$ cd ~/test/$ git clone https://github.com/theme-next/hexo-theme-next.git themes/next 修改博客根目录 _config.yml 中的 theme: landscape 改为 theme: next，然后重新执行 hexo g 来重新生成 其他操作：文章头部 代码 注释 title 文章主标题 date 创建时间 top 置顶（默认可以设置为-1，其他的 &gt;1 排序） tags 文章的标签 categories 文章的分类（用 - 可设置多类别） e.g: 12345678910111213--- title: TESTdate: 2016-05-14top: -1 tags: - test1 - test2categories: - test1 - tset2 --- 主题美化 * 显示当前浏览进度 打开 themes/next/_config.yml ,搜索关键字 back2top ,把 false 改为 true 123456back2top:enable: true# Back to top in sidebar.sidebar: true# Scroll percent label in b2t button.scrollpercent: true 主题美化 * 聊天室tidio（免费）、chatra（收费）、DaoVoice（方便） tidio（chatra同理） 在/themes/next/_config.yml中设置，搜索关键字 &amp; 修改 123456chat: enable: true # service: chatra service: tidio icon: comment # icon in Font Awesome 4, set false to disable icon text: Chat # button text, change it as you wish 123456# Tidio （直接注册，简单设置一下即可使用！）# See: https://www.tidiochat.com# Dashboard: https://www.tidiochat.com/panel/dashboardtidio: enable: true key: xxxxxxxxxxxxxxxxxx # 可以在这里看到: https://www.tidiochat.com/panel/settings/developer DaoVoice 部分免费+国内+可绑定微信 注册DaoVoice，点击注册 [ 快速接入DaoVoice ] 后台控制台 -&gt; 应用设置 -&gt; 安装到网站 -&gt; app_id 主题美化 * 顶部加载进度条 下载&amp;安装Progress module 12345$ cd /theme/next$ git clone https://github.com/theme-next/theme-next-pace source/lib/pace``` * 在`/themes/next/_config.yml`中设置 Progress bar in the top during page loading.Dependencies: https://github.com/theme-next/theme-next-pacepace: true #是否开启进度条 Themes list:pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atompace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicatorpace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimalFor examplepace_theme: pace-theme-center-atom #选择进度条样式` 官网：https://theme-next.org GitHub：https://github.com/theme-next/hexo-theme-next 使用手册：http://theme-next.iissnan.com]]></content>
+    <content type="text"><![CDATA[# Hexo + Github 搭建个人博客 ！ 前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端 建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.github.io 的仓库（必须是你的用户名，其它名称无效，不区分大小写），将来你的网站访问地址就是 https://test.github.io 了 一、Hexo简介： 官网：https://hexo.io Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 1、首先根据官网的流程安装安装前提：Nodi.js、Git 1$ npm install -g hexo-cli 2、建站123$ hexo init test$ cd test$ npm install 3、写作1$ hexo new [layout] &lt;title&gt; 布局 路径 post source/_posts page source draft source/_drafts 4、测试12$ hexo g$ hexo s 打开浏览器：http://localhost:4000 5、部署通过git部署到github： 安装 hexo-deployer-git 1$ npm install hexo-deployer-git --save 修改配置 12345deploy: type: git repo: https://github.com/Trybst/trybst.github.io.git branch: master message: test 3.提交到git 1$ hexo d 二、域名配置： 绑定域名（当Blog生成并上传完成后） 购买自己的域名（推荐阿里云） 获取自己博客的地址ping 博客地址 1$ ping test.github.io 域名解析（阿里云后台配置域名解析）[ xxx.xxx.xxx.xxx为博客的ip地址 ] 记录类型 | 主机记录 | 解析线路 | 记录值 | MX优先级 | TTL | ... ------- | ---- | --- | ------------- | --- | ---- | --- A | @ | 默认 | xxx.xxx.xxx.xxx | -- | 10分钟 | ... CNAME | www | 默认 | test.github.io | -- | 10分钟 | ... 三、hexo - Next 主题基本操作： 下载远程库到本地themes文件目录下 12$ cd ~/test/$ git clone https://github.com/theme-next/hexo-theme-next.git themes/next 修改博客根目录 _config.yml 中的 theme: landscape 改为 theme: next，然后重新执行 hexo g 来重新生成 其他操作：文章头部 代码 注释 title 文章主标题 date 创建时间 top 置顶（默认可以设置为-1，其他的 &gt;1 排序） tags 文章的标签 categories 文章的分类（用 - 可设置多类别） e.g: 12345678910111213--- title: TESTdate: 2016-05-14top: -1 tags: - test1 - test2categories: - test1 - tset2 --- 主题美化 * 显示当前浏览进度 打开 themes/next/_config.yml ,搜索关键字 back2top ,把 false 改为 true 123456back2top:enable: true# Back to top in sidebar.sidebar: true# Scroll percent label in b2t button.scrollpercent: true 主题美化 * 聊天室tidio（免费）、chatra（收费）、DaoVoice（方便） tidio（chatra同理） 在/themes/next/_config.yml中设置，搜索关键字 &amp; 修改 123456chat: enable: true # service: chatra service: tidio icon: comment # icon in Font Awesome 4, set false to disable icon text: Chat # button text, change it as you wish 123456# Tidio （直接注册，简单设置一下即可使用！）# See: https://www.tidiochat.com# Dashboard: https://www.tidiochat.com/panel/dashboardtidio: enable: true key: xxxxxxxxxxxxxxxxxx # 可以在这里看到: https://www.tidiochat.com/panel/settings/developer DaoVoice 部分免费+国内+可绑定微信 注册DaoVoice，点击注册 [ 快速接入DaoVoice ] 后台控制台 -&gt; 应用设置 -&gt; 安装到网站 -&gt; app_id 主题美化 * 顶部加载进度条 下载&amp;安装Progress module这个模块 $ cd /theme/next $ git clone https://github.com/theme-next/theme-next-pace source/lib/pace 在/themes/next/_config.yml中设置 官网：https://theme-next.org GitHub：https://github.com/theme-next/hexo-theme-next 使用手册：http://theme-next.iissnan.com]]></content>
       <categories>
         <category>Others</category>
       </categories>

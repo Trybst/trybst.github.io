@@ -113,7 +113,7 @@
 <meta property="og:site_name" content="Trybst&#39;s Blogs">
 <meta property="og:description" content="# Hexo + Github 搭建个人博客 ！ 前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.github">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-20T18:09:20.574Z">
+<meta property="og:updated_time" content="2019-05-20T18:28:19.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github + Hexo + Next">
 <meta name="twitter:description" content="# Hexo + Github 搭建个人博客 ！ 前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.github">
@@ -426,7 +426,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-21 02:09:20" itemprop="dateModified" datetime="2019-05-21T02:09:20+08:00">2019-05-21</time>
+                <time title="Modified: 2019-05-21 02:28:19" itemprop="dateModified" datetime="2019-05-21T02:28:19+08:00">2019-05-21</time>
               
             
           </span>
@@ -553,9 +553,36 @@
 <ul>
 <li>3.提交到git</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="二、域名配置："><a href="#二、域名配置：" class="headerlink" title="二、域名配置："></a>二、域名配置：</h2><ul>
+<li><p>绑定域名（当Blog生成并上传完成后）</p>
 <ul>
-<li><p>4.问题：每次<code>$ hexo d</code>后，都需要重新自定义域名？<br>解决方案： </p>
+<li>购买自己的域名（推荐阿里云）</li>
+<li><p>获取自己博客的地址<code>ping 博客地址</code></p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ping test.github.io</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>域名解析（阿里云后台配置域名解析）[ xxx.xxx.xxx.xxx为博客的ip地址 ]</p>
+<pre><code>记录类型  | 主机记录 | 解析线路 | 记录值 | MX优先级 | TTL | ...
+------- | ---- | --- | ------------- | --- | ---- | ---
+A | @ | 默认 | xxx.xxx.xxx.xxx | -- | 10分钟 | ...
+CNAME | www | 默认 | test.github.io | -- | 10分钟 | ...
+</code></pre></li>
+</ul>
+<ul>
+<li>如果需要设置二级域名，则需要在主机记录中添加二级域名的地址，如设置二级域名为 blog。<ul>
+<li>CNAME 记录需要设置为 <a href="http://www.blog" target="_blank" rel="noopener">www.blog</a>    </li>
+<li>A 记录需要设置为 blog （注：A 记录中原来的 @ 表示空的意思）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>问题：每次<code>$ hexo d</code>后，都需要重新自定义域名？<br>解决方案： </p>
 <ul>
 <li>在source 目录添加一个<code>新文件</code>CNAME</li>
 </ul>
@@ -577,25 +604,6 @@
 </li>
 <li><p>The CNAME filename must be uppercase<br>Only the bare domain or subdomain should be listed, e.g., <code>example.com</code> or <code>blog.example.com</code>, not <code>https://example.com</code>.</p>
 </li>
-</ul>
-<p><br></p>
-<h2 id="二、域名配置："><a href="#二、域名配置：" class="headerlink" title="二、域名配置："></a>二、域名配置：</h2><ul>
-<li><p>绑定域名（当Blog生成并上传完成后）</p>
-<ul>
-<li>购买自己的域名（推荐阿里云）</li>
-<li><p>获取自己博客的地址<code>ping 博客地址</code></p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ping test.github.io</span><br></pre></td></tr></table></figure>
-</code></pre></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>域名解析（阿里云后台配置域名解析）[ xxx.xxx.xxx.xxx为博客的ip地址 ]</p>
-<pre><code>记录类型  | 主机记录 | 解析线路 | 记录值 | MX优先级 | TTL | ...
-------- | ---- | --- | ------------- | --- | ---- | ---
-A | @ | 默认 | xxx.xxx.xxx.xxx | -- | 10分钟 | ...
-CNAME | www | 默认 | test.github.io | -- | 10分钟 | ...
-</code></pre></li>
 </ul>
 <p><br></p>
 <h2 id="三、hexo-Next-主题"><a href="#三、hexo-Next-主题" class="headerlink" title="三、hexo - Next 主题"></a>三、hexo - Next 主题</h2><h3 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h3><ul>

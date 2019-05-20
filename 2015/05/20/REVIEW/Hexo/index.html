@@ -113,7 +113,7 @@
 <meta property="og:site_name" content="Trybst&#39;s Blogs">
 <meta property="og:description" content="# Hexo + Github 搭建个人博客 ！ 前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.github">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-20T17:20:17.699Z">
+<meta property="og:updated_time" content="2019-05-20T17:36:29.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github + Hexo + Next">
 <meta name="twitter:description" content="# Hexo + Github 搭建个人博客 ！ 前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.github">
@@ -426,7 +426,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-21 01:20:17" itemprop="dateModified" datetime="2019-05-21T01:20:17+08:00">2019-05-21</time>
+                <time title="Modified: 2019-05-21 01:36:29" itemprop="dateModified" datetime="2019-05-21T01:36:29+08:00">2019-05-21</time>
               
             
           </span>
@@ -554,6 +554,19 @@
 <li>3.提交到git</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>4.问题：每次<code>$ hexo d</code>后，都需要重新自定义域名？<br>解决方案： </p>
+<ul>
+<li>在source 目录添加一个<code>新文件</code>CNAME</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi CNAME</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>CNAME内容写自己的域名（这个文件不需要任何后缀！）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#配置自己的域名 https://your-url</span><br><span class="line">https://www.trybst.com</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p><br></p>
 <h2 id="二、域名配置："><a href="#二、域名配置：" class="headerlink" title="二、域名配置："></a>二、域名配置：</h2><ul>
 <li><p>绑定域名（当Blog生成并上传完成后）</p>

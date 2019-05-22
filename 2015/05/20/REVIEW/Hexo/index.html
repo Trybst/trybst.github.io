@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="Trybst&#39;s Blogs">
 <meta property="og:description" content="Hexo + Github 搭建个人博客 ！   前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.githu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-20T19:09:38.675Z">
+<meta property="og:updated_time" content="2019-05-22T14:56:39.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github + Hexo + Next">
 <meta name="twitter:description" content="Hexo + Github 搭建个人博客 ！   前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.githu">
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-21 03:09:38" itemprop="dateModified" datetime="2019-05-21T03:09:38+08:00">2019-05-21</time>
+                <time title="Modified: 2019-05-22 22:56:39" itemprop="dateModified" datetime="2019-05-22T22:56:39+08:00">2019-05-22</time>
               
             
           </span>
@@ -670,6 +670,31 @@
 <ul>
 <li><p>2.把上面复制的源码粘贴到\themes\next\layout\layout.swig文件的<br>div class=”headband”下面即可。  </p>
 <p>  注意：href指向的地址需要修改成想要设置的github地址（a href=”<a href="https://your-url&quot;）。" target="_blank" rel="noopener">https://your-url&quot;）。</a></p>
+</li>
+</ul>
+<h4 id="主题美化-点击图片放大"><a href="#主题美化-点击图片放大" class="headerlink" title="主题美化 * 点击图片放大"></a>主题美化 * 点击图片放大</h4><ul>
+<li><p>官网：<a href="https://github.com/theme-next/theme-next-fancybox3" target="_blank" rel="noopener">https://github.com/theme-next/theme-next-fancybox3</a></p>
+</li>
+<li><p>fancybox框架（注意fancybox2与fancybox3不能同时安装）</p>
+<ul>
+<li>移除fancybox2</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm -rf themes/next/source/lib/fancybox</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>切换到next目录下，保证有layout, source, languages 和 其他文件（没有就先安装一下fancybox）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> $ cd themes/next</span><br><span class="line">$ ls</span><br><span class="line">bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  package.json  README.md  scripts  source  test</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>将module安装到themes/next/source/lib/目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/theme-next/theme-next-fancybox3 source/lib/fancybox</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>将fancybox在配置<code>_config.yml</code>中打开</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fancybox: true</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="主题美化-显示当前浏览进度"><a href="#主题美化-显示当前浏览进度" class="headerlink" title="主题美化 * 显示当前浏览进度"></a>主题美化 * 显示当前浏览进度</h4><ul>
@@ -972,7 +997,7 @@ $ git clone https://github.com/theme-next/theme-next-pace source/lib/pace
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前提准备："><span class="nav-number">1.</span> <span class="nav-text">前提准备：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立远程仓库trybst-github-io"><span class="nav-number">1.1.</span> <span class="nav-text">建立远程仓库trybst.github.io</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Hexo简介："><span class="nav-number">2.</span> <span class="nav-text">一、Hexo简介：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、首先根据官网的流程安装"><span class="nav-number">2.1.</span> <span class="nav-text">1、首先根据官网的流程安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、建站"><span class="nav-number">2.2.</span> <span class="nav-text">2、建站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、写作"><span class="nav-number">2.3.</span> <span class="nav-text">3、写作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、测试"><span class="nav-number">2.4.</span> <span class="nav-text">4、测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、部署"><span class="nav-number">2.5.</span> <span class="nav-text">5、部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、域名配置："><span class="nav-number">3.</span> <span class="nav-text">二、域名配置：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定域名（当Blog生成并上传完成后）"><span class="nav-number">3.1.</span> <span class="nav-text">绑定域名（当Blog生成并上传完成后）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题：每次-hexo-d后，都需要重新自定义域名？"><span class="nav-number">3.2.</span> <span class="nav-text">问题：每次$ hexo d后，都需要重新自定义域名？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、hexo-Next-主题"><span class="nav-number">4.</span> <span class="nav-text">三、hexo - Next 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本操作："><span class="nav-number">4.1.</span> <span class="nav-text">基本操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他操作："><span class="nav-number">4.2.</span> <span class="nav-text">其他操作：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章头部"><span class="nav-number">4.2.1.</span> <span class="nav-text">文章头部</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章置顶"><span class="nav-number">4.2.2.</span> <span class="nav-text">文章置顶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github-右上角"><span class="nav-number">4.2.3.</span> <span class="nav-text">Github 右上角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-显示当前浏览进度"><span class="nav-number">4.2.4.</span> <span class="nav-text">主题美化 * 显示当前浏览进度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-聊天室tidio（免费）、chatra（收费）、DaoVoice（方便）"><span class="nav-number">4.2.5.</span> <span class="nav-text">主题美化 * 聊天室tidio（免费）、chatra（收费）、DaoVoice（方便）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-顶部加载进度条"><span class="nav-number">4.2.6.</span> <span class="nav-text">主题美化 * 顶部加载进度条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Google-Ads-集成"><span class="nav-number">4.2.7.</span> <span class="nav-text">Google Ads 集成</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前提准备："><span class="nav-number">1.</span> <span class="nav-text">前提准备：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立远程仓库trybst-github-io"><span class="nav-number">1.1.</span> <span class="nav-text">建立远程仓库trybst.github.io</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Hexo简介："><span class="nav-number">2.</span> <span class="nav-text">一、Hexo简介：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、首先根据官网的流程安装"><span class="nav-number">2.1.</span> <span class="nav-text">1、首先根据官网的流程安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、建站"><span class="nav-number">2.2.</span> <span class="nav-text">2、建站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、写作"><span class="nav-number">2.3.</span> <span class="nav-text">3、写作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、测试"><span class="nav-number">2.4.</span> <span class="nav-text">4、测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、部署"><span class="nav-number">2.5.</span> <span class="nav-text">5、部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、域名配置："><span class="nav-number">3.</span> <span class="nav-text">二、域名配置：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定域名（当Blog生成并上传完成后）"><span class="nav-number">3.1.</span> <span class="nav-text">绑定域名（当Blog生成并上传完成后）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题：每次-hexo-d后，都需要重新自定义域名？"><span class="nav-number">3.2.</span> <span class="nav-text">问题：每次$ hexo d后，都需要重新自定义域名？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、hexo-Next-主题"><span class="nav-number">4.</span> <span class="nav-text">三、hexo - Next 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本操作："><span class="nav-number">4.1.</span> <span class="nav-text">基本操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他操作："><span class="nav-number">4.2.</span> <span class="nav-text">其他操作：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章头部"><span class="nav-number">4.2.1.</span> <span class="nav-text">文章头部</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章置顶"><span class="nav-number">4.2.2.</span> <span class="nav-text">文章置顶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github-右上角"><span class="nav-number">4.2.3.</span> <span class="nav-text">Github 右上角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-点击图片放大"><span class="nav-number">4.2.4.</span> <span class="nav-text">主题美化 * 点击图片放大</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-显示当前浏览进度"><span class="nav-number">4.2.5.</span> <span class="nav-text">主题美化 * 显示当前浏览进度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-聊天室tidio（免费）、chatra（收费）、DaoVoice（方便）"><span class="nav-number">4.2.6.</span> <span class="nav-text">主题美化 * 聊天室tidio（免费）、chatra（收费）、DaoVoice（方便）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-顶部加载进度条"><span class="nav-number">4.2.7.</span> <span class="nav-text">主题美化 * 顶部加载进度条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Google-Ads-集成"><span class="nav-number">4.2.8.</span> <span class="nav-text">Google Ads 集成</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

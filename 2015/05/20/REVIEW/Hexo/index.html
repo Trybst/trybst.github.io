@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="Trybst&#39;s Blogs">
 <meta property="og:description" content="Hexo + Github 搭建个人博客 ！   前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.githu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T18:33:09.848Z">
+<meta property="og:updated_time" content="2019-05-24T18:39:53.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github + Hexo + Next">
 <meta name="twitter:description" content="Hexo + Github 搭建个人博客 ！   前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.githu">
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-25 02:33:09" itemprop="dateModified" datetime="2019-05-25T02:33:09+08:00">2019-05-25</time>
+                <time title="Modified: 2019-05-25 02:39:53" itemprop="dateModified" datetime="2019-05-25T02:39:53+08:00">2019-05-25</time>
               
             
           </span>
@@ -568,23 +568,18 @@
 </li>
 </ul>
 <ul>
-<li>域名解析（阿里云后台配置域名解析）[ xxx.xxx.xxx.xxx为博客的ip地址 ]</li>
-</ul>
-<!--tefffsst-->
-<pre><code>记录类型  | 主机记录 | 解析线路 | 记录值 | ...
-------- | ---- | --- | ------------- | ---
-A | @ | 默认 | xxx.xxx.xxx.xxx | ...
-CNAME | www | 默认 | [YOUR NAME].github.io | ...
-</code></pre><ul>
-<li><p>如果需要设置二级域名，则需要在主机记录中添加二级域名的地址，如设置二级域名为 blog。</p>
-<ul>
-<li>CNAME 记录需要设置为 blog    </li>
-<li><p>A 记录需要设置为 @ （注：A 记录中原来的 @ 表示空的意思）</p>
-<p>记录类型  | 主机记录 | 解析线路 | 记录值 | …<br>——- | —- | — | ————- | — | —<br>CNAME | blog | 默认 | [YOUR NAME].github.io | …<br>A | @ | 默认 | xxx.xxx.xxx.xxx | …</p>
+<li><p>域名解析（阿里云后台配置域名解析）[ xxx.xxx.xxx.xxx为博客的ip地址 ]</p>
+<p> 记录类型  | 主机记录 | 解析线路 | 记录值 | …<br> ——- | —- | — | ————- | —<br> A | @ | 默认 | xxx.xxx.xxx.xxx | …<br> CNAME | www | 默认 | [YOUR NAME].github.io | …</p>
 </li>
 </ul>
-</li>
-</ul>
+<!--* 如果需要设置二级域名，则需要在主机记录中添加二级域名的地址，如设置二级域名为 blog。
+ * CNAME 记录需要设置为 blog    
+ * A 记录需要设置为 @ （注：A 记录中原来的 @ 表示空的意思）
+
+    记录类型  | 主机记录 | 解析线路 | 记录值 | ...
+    ------- | ---- | --- | ------------- | --- | ---
+    CNAME | blog | 默认 | [YOUR NAME].github.io | ...
+    A | @ | 默认 | xxx.xxx.xxx.xxx | ...-->
 <!--
     如果这样设置会报Warning
     记录类型  | 主机记录 | 解析线路 | 记录值 | ...
@@ -600,7 +595,7 @@ CNAME | www | 默认 | [YOUR NAME].github.io | ...
 <li>CNAME的内容：只列出裸域或子域 e.g., <code>trybst.com</code> or <code>blog.trybst.com</code></li>
 <li>注意：这个文件不需要任何后缀！（如果还有问题，看一下自己域名解析是不是有问题！）</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blog.trybst.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www.trybst.com</span><br></pre></td></tr></table></figure>
 <p>参考文档：</p>
 <ol>
 <li><p><a href="https://help.github.com/en/articles/using-a-custom-domain-with-github-pages" target="_blank" rel="noopener">using a custom domain with github pages</a> </p>

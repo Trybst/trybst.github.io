@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="Trybst&#39;s Blogs">
 <meta property="og:description" content="Hexo + Github 搭建个人博客 ！   前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.githu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T18:39:53.694Z">
+<meta property="og:updated_time" content="2019-05-24T20:21:07.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github + Hexo + Next">
 <meta name="twitter:description" content="Hexo + Github 搭建个人博客 ！   前提准备： 有一个 Github 账号，没有的话去注册一个； 安装了 Node.js、NPM，并了解相关基础知识； 安装了 Git 客户端  建立远程仓库trybst.github.io 登录 Github 新建一个名为你的 用户名.github.io 的仓库，比如说，如果你的 Github 用户名是 test，那么你就新建 test.githu">
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-25 02:39:53" itemprop="dateModified" datetime="2019-05-25T02:39:53+08:00">2019-05-25</time>
+                <time title="Modified: 2019-05-25 04:21:07" itemprop="dateModified" datetime="2019-05-25T04:21:07+08:00">2019-05-25</time>
               
             
           </span>
@@ -568,25 +568,71 @@
 </li>
 </ul>
 <ul>
-<li><p>域名解析（阿里云后台配置域名解析）[ xxx.xxx.xxx.xxx为博客的ip地址 ]</p>
-<p> 记录类型  | 主机记录 | 解析线路 | 记录值 | …<br> ——- | —- | — | ————- | —<br> A | @ | 默认 | xxx.xxx.xxx.xxx | …<br> CNAME | www | 默认 | [YOUR NAME].github.io | …</p>
+<li>域名解析（阿里云后台配置域名解析）[ xxx.xxx.xxx.xxx为博客的ip地址 ]</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>记录类型</th>
+<th>主机记录</th>
+<th>解析线路</th>
+<th>记录值</th>
+<th>…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>默认</td>
+<td>xxx.xxx.xxx.xxx</td>
+<td>…</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>www</td>
+<td>默认</td>
+<td>[YOUR NAME].github.io</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>如果需要设置二级域名，则需要在主机记录中添加二级域名的地址，如设置二级域名为 blog。<ul>
+<li>添加（或修改）A 记录设置为 life （注：A 记录中原来的 @ 表示空的意思）</li>
+<li>添加（或修改）CNAME 记录设置为 <a href="http://www.life" target="_blank" rel="noopener">www.life</a></li>
+<li>「如果是想要直接将个人技术blog和生活blog分开，需要新建仓库就要<mark>添加</mark>域名解析记录，否则直接<mark>修改</mark>即可，别忘记修改CNAME中的子域！」</li>
+</ul>
 </li>
 </ul>
-<!--* 如果需要设置二级域名，则需要在主机记录中添加二级域名的地址，如设置二级域名为 blog。
- * CNAME 记录需要设置为 blog    
- * A 记录需要设置为 @ （注：A 记录中原来的 @ 表示空的意思）
-
-    记录类型  | 主机记录 | 解析线路 | 记录值 | ...
-    ------- | ---- | --- | ------------- | --- | ---
-    CNAME | blog | 默认 | [YOUR NAME].github.io | ...
-    A | @ | 默认 | xxx.xxx.xxx.xxx | ...-->
-<!--
-    如果这样设置会报Warning
-    记录类型  | 主机记录 | 解析线路 | 记录值 | ...
-    ------- | ---- | --- | ------------- | ---
-    CNAME | www.blog | 默认 | [YOUR NAME].github.io | ...
-    A | blog | 默认 | xxx.xxx.xxx.xxx | ...-->
-<h3 id="问题：每次-hexo-d后，都需要重新自定义域名？"><a href="#问题：每次-hexo-d后，都需要重新自定义域名？" class="headerlink" title="问题：每次$ hexo d后，都需要重新自定义域名？"></a>问题：每次<code>$ hexo d</code>后，都需要重新自定义域名？</h3><p>解决方案： </p>
+<table>
+<thead>
+<tr>
+<th>记录类型</th>
+<th>主机记录</th>
+<th>解析线路</th>
+<th>记录值</th>
+<th>…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>life</td>
+<td>默认</td>
+<td>xxx.xxx.xxx.xxx</td>
+<td>…</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td><a href="http://www.life" target="_blank" rel="noopener">www.life</a></td>
+<td>默认</td>
+<td>[YOUR NAME].github.io</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<h4 id="问题：每次-hexo-d后，都需要重新自定义域名？"><a href="#问题：每次-hexo-d后，都需要重新自定义域名？" class="headerlink" title="问题：每次$ hexo d后，都需要重新自定义域名？"></a>问题：每次<code>$ hexo d</code>后，都需要重新自定义域名？</h4><p>解决方案： <!--（将CNAME让Github解析）--></p>
 <ul>
 <li>在source 目录添加一个<code>新文件</code>CNAME</li>
 </ul>
@@ -610,7 +656,9 @@
 </li>
 </ul>
 <p><br></p>
-<h2 id="三、hexo-Next-主题"><a href="#三、hexo-Next-主题" class="headerlink" title="三、hexo - Next 主题"></a>三、hexo - Next 主题</h2><h3 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h3><ul>
+<h2 id="三、hexo-Next-主题"><a href="#三、hexo-Next-主题" class="headerlink" title="三、hexo - Next 主题"></a>三、hexo - Next 主题</h2><p>官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a><br>NexT主题：<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a></p>
+<p>「以NexT主题为例」</p>
+<h3 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h3><ul>
 <li>下载远程库到本地themes文件目录下</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/test/</span><br><span class="line">$ git clone https://github.com/theme-next/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
@@ -1030,7 +1078,7 @@ $ git clone https://github.com/theme-next/theme-next-pace source/lib/pace
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前提准备："><span class="nav-number">1.</span> <span class="nav-text">前提准备：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立远程仓库trybst-github-io"><span class="nav-number">1.1.</span> <span class="nav-text">建立远程仓库trybst.github.io</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Hexo简介："><span class="nav-number">2.</span> <span class="nav-text">一、Hexo简介：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、首先根据官网的流程安装"><span class="nav-number">2.1.</span> <span class="nav-text">1、首先根据官网的流程安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、建站"><span class="nav-number">2.2.</span> <span class="nav-text">2、建站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、写作"><span class="nav-number">2.3.</span> <span class="nav-text">3、写作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、测试"><span class="nav-number">2.4.</span> <span class="nav-text">4、测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、部署"><span class="nav-number">2.5.</span> <span class="nav-text">5、部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、域名配置："><span class="nav-number">3.</span> <span class="nav-text">二、域名配置：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定域名（当Blog生成并上传完成后）"><span class="nav-number">3.1.</span> <span class="nav-text">绑定域名（当Blog生成并上传完成后）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题：每次-hexo-d后，都需要重新自定义域名？"><span class="nav-number">3.2.</span> <span class="nav-text">问题：每次$ hexo d后，都需要重新自定义域名？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、hexo-Next-主题"><span class="nav-number">4.</span> <span class="nav-text">三、hexo - Next 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本操作："><span class="nav-number">4.1.</span> <span class="nav-text">基本操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他操作："><span class="nav-number">4.2.</span> <span class="nav-text">其他操作：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章头部"><span class="nav-number">4.2.1.</span> <span class="nav-text">文章头部</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章置顶"><span class="nav-number">4.2.2.</span> <span class="nav-text">文章置顶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github-右上角"><span class="nav-number">4.2.3.</span> <span class="nav-text">Github 右上角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-点击图片放大"><span class="nav-number">4.2.4.</span> <span class="nav-text">主题美化 * 点击图片放大</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-显示当前浏览进度"><span class="nav-number">4.2.5.</span> <span class="nav-text">主题美化 * 显示当前浏览进度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-聊天室tidio（免费）、chatra（收费）、DaoVoice（方便）"><span class="nav-number">4.2.6.</span> <span class="nav-text">主题美化 * 聊天室tidio（免费）、chatra（收费）、DaoVoice（方便）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-顶部加载进度条"><span class="nav-number">4.2.7.</span> <span class="nav-text">主题美化 * 顶部加载进度条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#补充资料：A记录和CNAME记录的区别？"><span class="nav-number">4.2.8.</span> <span class="nav-text">补充资料：A记录和CNAME记录的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Google-Ads-集成"><span class="nav-number">4.2.9.</span> <span class="nav-text">Google Ads 集成</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前提准备："><span class="nav-number">1.</span> <span class="nav-text">前提准备：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立远程仓库trybst-github-io"><span class="nav-number">1.1.</span> <span class="nav-text">建立远程仓库trybst.github.io</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Hexo简介："><span class="nav-number">2.</span> <span class="nav-text">一、Hexo简介：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、首先根据官网的流程安装"><span class="nav-number">2.1.</span> <span class="nav-text">1、首先根据官网的流程安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、建站"><span class="nav-number">2.2.</span> <span class="nav-text">2、建站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、写作"><span class="nav-number">2.3.</span> <span class="nav-text">3、写作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、测试"><span class="nav-number">2.4.</span> <span class="nav-text">4、测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、部署"><span class="nav-number">2.5.</span> <span class="nav-text">5、部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、域名配置："><span class="nav-number">3.</span> <span class="nav-text">二、域名配置：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定域名（当Blog生成并上传完成后）"><span class="nav-number">3.1.</span> <span class="nav-text">绑定域名（当Blog生成并上传完成后）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题：每次-hexo-d后，都需要重新自定义域名？"><span class="nav-number">3.1.1.</span> <span class="nav-text">问题：每次$ hexo d后，都需要重新自定义域名？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、hexo-Next-主题"><span class="nav-number">4.</span> <span class="nav-text">三、hexo - Next 主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本操作："><span class="nav-number">4.1.</span> <span class="nav-text">基本操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他操作："><span class="nav-number">4.2.</span> <span class="nav-text">其他操作：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章头部"><span class="nav-number">4.2.1.</span> <span class="nav-text">文章头部</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章置顶"><span class="nav-number">4.2.2.</span> <span class="nav-text">文章置顶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Github-右上角"><span class="nav-number">4.2.3.</span> <span class="nav-text">Github 右上角</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-点击图片放大"><span class="nav-number">4.2.4.</span> <span class="nav-text">主题美化 * 点击图片放大</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-显示当前浏览进度"><span class="nav-number">4.2.5.</span> <span class="nav-text">主题美化 * 显示当前浏览进度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-聊天室tidio（免费）、chatra（收费）、DaoVoice（方便）"><span class="nav-number">4.2.6.</span> <span class="nav-text">主题美化 * 聊天室tidio（免费）、chatra（收费）、DaoVoice（方便）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主题美化-顶部加载进度条"><span class="nav-number">4.2.7.</span> <span class="nav-text">主题美化 * 顶部加载进度条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#补充资料：A记录和CNAME记录的区别？"><span class="nav-number">4.2.8.</span> <span class="nav-text">补充资料：A记录和CNAME记录的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Google-Ads-集成"><span class="nav-number">4.2.9.</span> <span class="nav-text">Google Ads 集成</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

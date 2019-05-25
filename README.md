@@ -1,8 +1,3 @@
-
----
-
-title: README
-
 ---
 
 ### Trybst's Blog.
